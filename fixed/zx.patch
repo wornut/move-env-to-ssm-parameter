@@ -1,0 +1,11 @@
+--- node_modules/zx/zx.mjs	2021-07-07 16:04:05.359318800 +0700
++++ fixed/zx.mjs	2021-07-30 18:22:26.308445200 +0700
+@@ -184,7 +184,7 @@
+       )
+     }, 100)
+ 
+-  await tsc
++  await tsc.catch(() => 0)
+ 
+   clearInterval(interval)
+   process.stdout.write('   \r')
